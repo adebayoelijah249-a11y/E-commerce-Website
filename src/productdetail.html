@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
@@ -110,90 +111,21 @@
         </li>
       </nav>
     </section>
-    <section class="gap-5 flex flex-col md:flex md:flex-row md:p-10">
-      <div class="flex flex-wrap justify-center gap-4">
-        <img src="/src/assets/image 1.png" alt="" />
-        <div class="flex flex-wrap gap-4">
-          <img src="/src/assets/image 2.png" alt="" />
-          <img src="/src/assets/image 5.png" alt="" />
-          <img src="/src/assets/image 6.png" alt="" />
-        </div>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <!-- Breadcrumb -->
+      <div class="flex items-center gap-2 text-sm text-black/50 mb-8">
+        <a href="index.html" class="hover:text-black">Home</a>
+        <span>/</span>
+        <span id="breadcrumb-product">Product</span>
       </div>
-      <div class="w-3xl md:p-10 p-2">
-        <h1 class="text-4xl font-bold md:text-6xl">
-          ONE LIFE GRAPHIC <br />
-          T-SHIRT
-        </h1>
-        <div class="flex gap-3 pt-4">
-          <div style="color: gold">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-          </div>
-          <p>4.5/5</p>
-        </div>
-        <div class="flex gap-3 pt-4 p-3">
-          <p class="text-2xl font-bold">$260</p>
-          <del class="text-[#aaaaaa ] text-2xl">$300</del>
-          <p class="bg-red-300 text-red-100 rounded-2xl w-20 text-center">
-            -40%
-          </p>
-        </div>
-        <p class="md:p-8 p-1 w-96 md:text-2xl md:w-2xl">
-          The graphic T-shirt which is perfect for any occasion Crafted from a
-          soft and breatheable fabric, it offers a superior comfort and style
-        </p>
 
-        <p class="md:p-6 p-1 text-2xl">Select Colors</p>
-        <div class="w-">
-          <button class="bg-[#]rounded-full h-10 w-10">✔</button>
-          <button class="bg-[#]rounded-full h-10 w-10">✔</button>
-          <button class="bg-[#31344F]rounded-full h-10 w-10">✔</button>
-        </div>
+      <!-- PRODUCT DETAILS -->
+      <section
+        id="product-details"
+        class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14"
+      ></section>
+    </main>
 
-        <div>
-          <div>
-            <p class="text-2xl p-8">Choose Size</p>
-            <div class="flex md:gap-5 gap-2">
-              <button
-                class="size-btn bg-[#faf5f5] text-black rounded-3xl hover:bg-gray-400 md:w-30 p-3"
-              >
-                Small
-              </button>
-              <button
-                class="size-btn bg-[#faf5f5] text-black rounded-3xl hover:bg-gray-400 md:w-30 p-3"
-              >
-                Medium</button
-              ><button
-                class="size-btn bg-[#faf5f5] text-black rounded-3xl hover:bg-gray-400 md:w-30 p-3"
-              >
-                Large</button
-              ><button
-                class="size-btn bg-[#faf5f5] text-black rounded-3xl hover:bg-gray-400 md:w-30 p-3"
-              >
-                X-large
-              </button>
-            </div>
-            <div class="flex gap-4 p-4">
-              <div
-                class="flex justify-between items-center rounded-2xl p-3 bg[#faf5f5] text-black hover:bg-gray-400 md:w-30"
-              >
-                <button>-</button>
-                <p>1</p>
-                <button>+</button>
-              </div>
-              <button
-                class="size-btn bg-black text-white rounded-3xl hover:bg-gray-400 md:p-10"
-              >
-                Add to Cart
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="flex flex-col items-center">
       <div class="flex justify-center gap-10">
         <div class="flex gap-5">
@@ -475,7 +407,7 @@
           </li>
 
           <li class="list-none">
-            <a href="">Privacy Policyr</a>
+            <a href="">Privacy Policy</a>
           </li>
         </nav>
       </div>
@@ -531,6 +463,9 @@
       </div>
     </div>
     <script src="product.js"></script>
+    <script src="cart.js"></script>
     <script src="script.js"></script>
+    <script src="cart.js"></script>
+    <script src="productdetail.js"></script>
   </body>
 </html>

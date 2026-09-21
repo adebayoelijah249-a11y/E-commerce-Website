@@ -3,426 +3,291 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Category-Page</title>
-    <link rel="stylesheet" href="./output.css" />
-    <!-- <script src="./productpage.js" defer></script> -->
+    <title>Document</title>
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body class="border-4 border-red-500 min-w-screen min-h-screen">
-    <header>
-      <div class="text-center text-white bg-black p-2">
-        <p>Sign up and get 20% off to your first order. Sign Up Now</p>
-      </div>
-      <nav class="flex justify-between items-center p-4 md:px-8">
-        <div class="flex gap-2 justify-between items-center">
-          <img
-            src="assets/images/hamburger-icon.png"
-            alt="hamburger"
-            class="lg:hidden"
-            width="45"
-          />
-          <h1 class="text-2xl font-extrabold">SHOP.CO</h1>
-        </div>
-        <ul
-          class="hidden lg:flex justify-center items-center gap-4 font-bold md:gap-8"
+  <body>
+    <div
+      id="header"
+      class="bg-white border-b border-gray-100 font-sans sticky top-0 z-50"
+    ></div>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col lg:flex-row gap-6">
+        <!-- SIDEBAR -->
+        <aside
+          class="w-full lg:w-75 shrink-0 border border-black/10 rounded-2xl p-5 h-fit"
         >
-          <li
-            class="relative before:content-[''] before:absolute before:min-w-full before:border-2 before:border-black before:-bottom-2 before:opacity-0 hover:before:opacity-100"
-          >
-            <a href="#">Shop</a>
-          </li>
-          <li
-            class="relative before:content-[''] before:absolute before:min-w-full before:border-2 before:border-black before:-bottom-2 before:opacity-0 hover:before:opacity-100"
-          >
-            <a href="#">On Sale</a>
-          </li>
-          <li
-            class="relative before:content-[''] before:absolute before:min-w-full before:border-2 before:border-black before:-bottom-2 before:opacity-0 hover:before:opacity-100"
-          >
-            <a href="#">New Arrivals</a>
-          </li>
-          <li
-            class="relative before:content-[''] before:absolute before:min-w-full before:border-2 before:border-black before:-bottom-2 before:opacity-0 hover:before:opacity-100"
-          >
-            <a href="#">Brands</a>
-          </li>
-        </ul>
-        <div
-          class="hidden lg:flex justify-center items-center gap-2 bg-[#F0F0F0] p-2 rounded-2xl"
-        >
-          <img src="assets/images/search-icon.png" alt="search" />
-          <input
-            type="text"
-            placeholder="Search for products...."
-            class="outline-0 text-[#00000099]"
-          />
-        </div>
-        <div class="flex gap-2">
-          <img
-            src="assets/images/search-icon.png"
-            alt="search"
-            class="lg:hidden"
-          />
-          <img src="assets/images/shoppingcart-icon.png" alt="cart" />
-          <img src="assets/images/profile-icon.png" alt="profile" />
-        </div>
-      </nav>
-    </header>
-    <div class="h-1 bg-gray-300 max-w-[90vw] mx-auto"></div>
-    <main class="p-4 md:px-8">
-      <ul class="flex justify-start gap-1 items-center w-68 font-bold">
-        <li><a href="#" id="">Home</a></li>
-        <li>
-          <a href="#"><img src="assets/images/greater-img.png" alt="" /></a>
-        </li>
-        <li><a href="#" id="">Shop</a></li>
-        <li>
-          <a href="#"><img src="assets/images/greater-img.png" alt="" /></a>
-        </li>
-        <li><a href="#" id="">Men</a></li>
-        <li>
-          <a href="#"><img src="assets/images/greater-img.png" alt="" /></a>
-        </li>
-        <li><a href="#" id="">T-shirts</a></li>
-        <li>
-          <a href="#"><img src="assets/images/greater-img.png" alt="" /></a>
-        </li>
-      </ul>
-
-      <section
-        id="product-section"
-        class="sm:flex flex-col gap-8 py-4 md:flex-row items-start"
-      >
-        <div
-          id="product-img-container"
-          class="flex gap-4 flex-wrap justify-center"
-        >
-          <img
-            src="assets/images/product-green-shirt-big-img.png"
-            alt="product"
-          />
-          <div class="flex flex-wrap gap-4 justify-center">
-            <img
-              src="assets/images/product-green-shirt-front-img.png"
-              alt="product"
-            />
-            <img
-              src="assets/images/product-green-shirt-back-img.png"
-              alt="product"
-            />
-            <img src="assets/images/product-boy-img.png" alt="product" />
-          </div>
-        </div>
-
-        <div id="product-details-container" class="flex flex-col gap-2">
-          <div id="main-product" class="flex flex-col gap-4 py-4"></div>
-
-          <div class="h-1 bg-gray-300 w-full"></div>
-          <div id="select-colors" class="flex flex-col gap-2 py-4">
-            <p>Select Colors</p>
-            <div id="colors" class="flex gap-2 justify-between w-45">
-              <div class="bg-amber-950 p-6 rounded-full"></div>
-              <div class="bg-green-500 p-6 rounded-full"></div>
-              <div class="bg-blue-950 p-6 rounded-full"></div>
-            </div>
-          </div>
-          <div class="h-1 bg-gray-300 w-full gap-2"></div>
-          <div id="size-container" class="flex flex-col gap-2 py-4">
-            <p>Choose size</p>
-            <div>
-              <button
-                class="p-4 bg-gray-300 rounded-2xl font-bold hover:bg-black text-white transition-colors duration-150 ease-in-out"
-              >
-                Small
-              </button>
-              <button
-                class="p-4 bg-gray-300 rounded-2xl font-bold hover:bg-black text-white transition-colors duration-150 ease-in-out"
-              >
-                Median
-              </button>
-              <button
-                class="p-4 bg-gray-300 rounded-2xl font-bold hover:bg-black text-white transition-colors duration-150 ease-in-out"
-              >
-                Large
-              </button>
-              <button
-                class="p-4 bg-gray-300 rounded-2xl font-bold hover:bg-black text-white transition-colors duration-150 ease-in-out"
-              >
-                X-Large
-              </button>
-            </div>
-          </div>
-          <div class="h-1 bg-gray-300 w-full"></div>
-          <div class="flex gap-2 py-4">
-            <div
-              class="p-4 bg-gray-300 rounded-2xl font-bold flex justify-between items-center min-w-28"
+          <!-- Filters Header -->
+          <div class="flex items-center justify-between pb-5">
+            <h2 class="text-2xl font-bold">Filters</h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-6 h-6"
             >
-              <button>-</button>
-              <p>1</p>
-              <button>+</button>
+              <path
+                d="M6 12a.75.75 0 0 1-.75-.75v-7.5a.75.75 0 1 1 1.5 0v7.5A.75.75 0 0 1 6 12ZM18 12a.75.75 0 0 1-.75-.75v-7.5a.75.75 0 0 1 1.5 0v7.5A.75.75 0 0 1 18 12ZM6.75 20.25v-1.5a.75.75 0 0 0-1.5 0v1.5a.75.75 0 0 0 1.5 0ZM18.75 18.75v1.5a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 1.5 0ZM12.75 5.25v-1.5a.75.75 0 0 0-1.5 0v1.5a.75.75 0 0 0 1.5 0ZM12 21a.75.75 0 0 1-.75-.75v-7.5a.75.75 0 0 1 1.5 0v7.5A.75.75 0 0 1 12 21ZM3.75 15a2.25 2.25 0 1 0 4.5 0 2.25 2.25 0 0 0-4.5 0ZM12 11.25a2.25 2.25 0 1 1 0-4.5 2.25 2.25 0 0 1 0 4.5ZM15.75 15a2.25 2.25 0 1 0 4.5 0 2.25 2.25 0 0 0-4.5 0Z"
+              />
+            </svg>
+          </div>
+          <div class="border-t border-black/10"></div>
+          <!-- TYPE -->
+          <div class="py-5">
+            <div class="flex items-center justify-between mb-5">
+              <h3 class="text-xl font-bold">Type</h3>
+              <span class="text-xl"> ⌃ </span>
+            </div>
+            <div class="flex flex-col gap-4">
+              <label class="flex items-center justify-between cursor-pointer">
+                <span>T-shirts</span>
+                <input
+                  type="checkbox"
+                  value="T-shirts"
+                  class="type-filter w-5 h-5 accent-black cursor-pointer"
+                />
+              </label>
+              <label class="flex items-center justify-between cursor-pointer">
+                <span>Shirts</span>
+                <input
+                  type="checkbox"
+                  value="Shirts"
+                  class="type-filter w-5 h-5 accent-black cursor-pointer"
+                />
+              </label>
+              <label class="flex items-center justify-between cursor-pointer">
+                <span>Jeans</span>
+                <input
+                  type="checkbox"
+                  value="Jeans"
+                  class="type-filter w-5 h-5 accent-black cursor-pointer"
+                />
+              </label>
+              <label class="flex items-center justify-between cursor-pointer">
+                <span>Shorts</span>
+                <input
+                  type="checkbox"
+                  value="Shorts"
+                  class="type-filter w-5 h-5 accent-black cursor-pointer"
+                />
+              </label>
+              <label class="flex items-center justify-between cursor-pointer">
+                <span>Hoodie</span>
+                <input
+                  type="checkbox"
+                  value="Hoodie"
+                  class="type-filter w-5 h-5 accent-black cursor-pointer"
+                />
+              </label>
+            </div>
+          </div>
+          <div class="border-t border-black/10"></div>
+          <!-- PRICE -->
+          <div class="py-5">
+            <div class="flex items-center justify-between mb-5">
+              <h3 class="text-xl font-bold">Price</h3>
+              <span class="text-xl"> ⌃ </span>
+            </div>
+            <!-- Price slider area -->
+            <div class="py-5">
+              <input
+                type="range"
+                min="0"
+                max="500"
+                value="500"
+                class="w-full accent-black mt-3"
+              />
+              <div class="flex justify-between mt-3 text-sm text-black/60">
+                <span>$0</span>
+                <span>$500</span>
+              </div>
             </div>
             <button
-              class="p-4 bg-black rounded-2xl font-bold hover:bg-black text-white transition-colors duration-150 ease-in-out"
+              class="w-full bg-black text-white py-3 rounded-full font-medium hover:bg-black/80 transition"
             >
-              Add to Cart
+              Apply
             </button>
           </div>
-        </div>
-      </section>
-
-      <section class="w-full p-4 border-b-2 border-gray-300">
-        <ul class="flex justify-around gap-2 items-center font-bold">
-          <li class="relative">
-            <a
-              href=""
-              class="absolutebefore:content-[''] before:absolute before:min-w-40 before:left-1/2 before:-translate-x-1/2 before:border-2 before:border-black before:-bottom-4 before:opacity-0 hover:before:opacity-100"
-              >Product Details</a
-            >
-          </li>
-          <li class="relative">
-            <a
-              href=""
-              class="absolutebefore:content-[''] before:absolute before:min-w-40 before:left-1/2 before:-translate-x-1/2 before:border-2 before:border-black before:-bottom-4 before:opacity-0 hover:before:opacity-100"
-              >Ratings & Reviews</a
-            >
-          </li>
-          <li class="relative">
-            <a
-              href=""
-              class="absolutebefore:content-[''] before:absolute before:min-w-40 before:left-1/2 before:-translate-x-1/2 before:border-2 before:border-black before:-bottom-4 before:opacity-0 hover:before:opacity-100"
-              >F&Qs</a
-            >
-          </li>
-        </ul>
-      </section>
-
-      <section class="p-4 flex flex-col gap-6 justify-center items-center">
-        <div class="flex justify-between gap-2 py-4 items-center w-full">
-          <div class="items-center">
-            <p class="font-bold">
-              All Reviews <span class="text-gray-300">(45)</span>
-            </p>
-          </div>
-          <div id="buttons" class="flex gap-2 items-center">
-            <button class="p-4 bg-gray-400 rounded-2xl"></button>
-            <button class="p-4 bg-gray-400 rounded-2xl"></button>
-            <button class="p-4 bg-black text-white rounded-2xl">
-              Write a Review
-            </button>
-          </div>
-        </div>
-
-        <div
-          id="product-reviews-container"
-          class="flex flex-wrap gap-4 justify-center"
-        ></div>
-        <button
-          class="rounded-2xl p-4 w-full border-2 border-black max-w-40 text-black hover:bg-black font-bold hover:text-white transition-colors duration-150 ease-in-out"
-        >
-          View All
-        </button>
-      </section>
-
-      <section
-        id="top-selling-section"
-        class="py-20 flex flex-col justify-center items-center gap-16"
-      >
-        <h2 class="text-4xl font-extrabold">YOU MIGHT ALSO LIKE</h2>
-        <div
-          id="product-page-products-container"
-          class="flex flex-wrap items-center justify-center gap-8"
-        >
-          <!-- <div class="flex flex-col justify-center items-start">
-            <img src="assets/images/new-arrival-black-shirt.png" alt="" />
-            <p id="name" class="font-bold">T-shirt with Tape Details</p>
-            <div id="star-container" class="flex gap-1">
-              <svg
-                class="w-4 h-4 fill-[#FFC633] text-[#FFC633]"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                />
-              </svg>
-              <svg
-                class="w-4 h-4 fill-[#FFC633] text-[#FFC633]"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                />
-              </svg>
-              <svg
-                class="w-4 h-4 fill-[#FFC633] text-[#FFC633]"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                />
-              </svg>
-              <svg
-                class="w-4 h-4 fill-[#FFC633] text-[#FFC633]"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                />
-              </svg>
-              <svg
-                class="w-4 h-4 fill-[#FFC633] text-[#FFC633]"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                />
-              </svg>
+          <div class="border-t border-black/10"></div>
+          <!-- COLORS -->
+          <div class="py-5">
+            <div class="flex items-center justify-between mb-5">
+              <h3 class="text-xl font-bold">Colors</h3>
+              <span class="text-xl"> ⌃ </span>
             </div>
-            <p id="price" class="text-2xl font-bold">$120</p>
-          </div>
-          <div class="flex flex-col justify-center items-start">
-            <img src="assets/images/new-arrival-black-shirt.png" alt="" />
-            <p id="name" class="font-bold">T-shirt with Tape Details</p>
-            <div id="star-container" class="flex gap-1">
-              <svg
-                class="w-4 h-4 fill-[#FFC633] text-[#FFC633]"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                />
-              </svg>
-              <svg
-                class="w-4 h-4 fill-[#FFC633] text-[#FFC633]"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                />
-              </svg>
-              <svg
-                class="w-4 h-4 fill-[#FFC633] text-[#FFC633]"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                />
-              </svg>
-              <svg
-                class="w-4 h-4 fill-[#FFC633] text-[#FFC633]"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                />
-              </svg>
-              <svg
-                class="w-4 h-4 fill-[#FFC633] text-[#FFC633]"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                />
-              </svg>
+            <div class="flex flex-wrap gap-4">
+              <!-- Brown -->
+              <button
+                type="button"
+                class="w-8 h-8 rounded-full bg-yellow-900 border-2 border-transparent hover:border-black transition"
+              ></button>
+              <!-- Dark Red -->
+              <button
+                type="button"
+                class="w-8 h-8 rounded-full bg-red-900 border-2 border-transparent hover:border-black transition"
+              ></button>
+              <!-- Dark Green -->
+              <button
+                type="button"
+                class="w-8 h-8 rounded-full bg-green-900 border-2 border-transparent hover:border-black transition"
+              ></button>
+              <!-- Dark Blue -->
+              <button
+                type="button"
+                class="w-8 h-8 rounded-full bg-blue-900 border-2 border-transparent hover:border-black transition"
+              ></button>
+              <!-- Yellow -->
+              <button
+                type="button"
+                class="w-8 h-8 rounded-full bg-yellow-500 border-2 border-transparent hover:border-black transition"
+              ></button>
+              <!-- Red -->
+              <button
+                type="button"
+                class="w-8 h-8 rounded-full bg-red-500 border-2 border-transparent hover:border-black transition"
+              ></button>
+              <!-- Green -->
+              <button
+                type="button"
+                class="w-8 h-8 rounded-full bg-green-500 border-2 border-transparent hover:border-black transition"
+              ></button>
+              <!-- Blue -->
+              <button
+                type="button"
+                class="w-8 h-8 rounded-full bg-blue-500 border-2 border-transparent hover:border-black transition"
+              ></button>
+              <!-- Black -->
+              <button
+                type="button"
+                class="w-8 h-8 rounded-full bg-black border-2 border-transparent hover:border-gray-400 transition"
+              ></button>
             </div>
-            <p id="price" class="text-2xl font-bold">$120</p>
-          </div> -->
-        </div>
-      </section>
-    </main>
-    <footer class="flex flex-col gap-6 bg-[#F0F0F0] items-center p-10 relative">
-      <form
-        action="#"
-        class="rounded-4xl bg-black p-6 flex flex-col justify-between gap-8 md:flex-row w-[80%]"
-      >
-        <h3 class="text-4xl font-extrabold text-white">
-          STAY UPTO DATE ABOUT OUR LATEST OFFERS
-        </h3>
-        <div class="flex flex-col justify-center items-center gap-4">
-          <div
-            class="flex justify-between items-center p-2 bg-white rounded-2xl gap-2 w-full"
+          </div>
+          <div class="border-t border-black/10"></div>
+          <!-- DRESS STYLE -->
+          <div class="py-5">
+            <div class="flex items-center justify-between mb-5">
+              <h3 class="text-xl font-bold">Dress Style</h3>
+              <span class="text-xl"> ⌃ </span>
+            </div>
+            <div class="flex flex-col gap-4">
+              <label class="flex items-center justify-between cursor-pointer">
+                <span>Casual</span>
+                <input
+                  type="checkbox"
+                  value="Casual"
+                  class="style-filter w-5 h-5 accent-black cursor-pointer"
+                />
+              </label>
+              <label class="flex items-center justify-between cursor-pointer">
+                <span>Formal</span>
+                <input
+                  type="checkbox"
+                  value="Formal"
+                  class="style-filter w-5 h-5 accent-black cursor-pointer"
+                />
+              </label>
+              <label class="flex items-center justify-between cursor-pointer">
+                <span>Party</span>
+                <input
+                  type="checkbox"
+                  value="Party"
+                  class="style-filter w-5 h-5 accent-black cursor-pointer"
+                />
+              </label>
+              <label class="flex items-center justify-between cursor-pointer">
+                <span>Gym</span>
+                <input
+                  type="checkbox"
+                  value="Gym"
+                  class="style-filter w-5 h-5 accent-black cursor-pointer"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- Clear filters -->
+          <button
+            id="clear-filters"
+            type="button"
+            class="w-full bg-black text-white py-3 rounded-full font-medium hover:bg-black/80 transition"
           >
-            <img src="assets/images/gmail-icon.png" alt="" />
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              class="bg-inherit outline-0 w-full text-[#00000099]"
-            />
-          </div>
-          <button class="p-2 bg-white rounded-2xl font-bold w-full">
-            Subscribe to Newsletter
+            Clear Filters
           </button>
-        </div>
-      </form>
-      <div class="flex flex-col gap-8">
-        <div class="flex gap-2 flex-col">
-          <h4 class="text-4xl font-extrabold">SHOP.CO</h4>
-          <p>
-            We have clothes that suits your style and which you're proud to
-            wear. From women to men.
-          </p>
-          <div class="flex gap-4 p-4">
-            <a href="https://x.com/home">
-              <img src="/src/assets/1.png" alt=""
-            /></a>
-            <a href="https://web.facebook.com/">
-              <img src="/src/assets/2.png" alt="" />
-            </a>
-            <a href="https://www.instagram.com/">
-              <img src="/src/assets/3.png" alt="" />
-            </a>
-            <a href="https://github.com/">
-              <img src="/src/assets/4.png" alt="" />
-            </a>
+        </aside>
+        <!-- RIGHT SIDE / PRODUCTS -->
+        <main class="flex-1 min-w-0">
+          <!-- Heading -->
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h1 id="category-title" class="text-3xl sm:text-4xl font-bold">
+                All Products
+              </h1>
+              <p id="product-count" class="text-sm text-black/50 mt-1">
+                Showing Products
+              </p>
+            </div>
+            <!-- Sort -->
+            <div class="hidden sm:flex items-center gap-2">
+              <span class="text-sm text-black/50"> Sort by: </span>
+              <select
+                class="bg-transparent font-medium text-sm outline-none cursor-pointer"
+              >
+                <option>Most Popular</option>
+                <option>Newest</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="flex justify-between gap-4 flex-wrap">
-          <ul class="flex flex-col justify-center items-start text-start">
-            <li class="font-extrabold text-[1rem]">
-              <a href="#">COMPANY</a>
-            </li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Works</a></li>
-            <li><a href="#">Career</a></li>
-          </ul>
-
-          <ul class="flex flex-col justify-center items-start text-start">
-            <li class="font-extrabold text-[1rem]"><a href="#">HELP</a></li>
-            <li><a href="#">Customer Support</a></li>
-            <li><a href="#">Delivery Details</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
-
-          <ul class="flex flex-col justify-center items-start text-start">
-            <li class="font-extrabold text-[1rem]"><a href="#">F A Q</a></li>
-            <li><a href="#">Account</a></li>
-            <li><a href="#">Manage Deliveries</a></li>
-            <li><a href="#">Orders</a></li>
-            <li><a href="#">Payment</a></li>
-          </ul>
-
-          <ul class="flex flex-col justify-center items-start text-start">
-            <li class="font-extrabold text-[1rem]">
-              <a href="#">RESOURCES</a>
-            </li>
-            <li><a href="#">Free eBook</a></li>
-            <li><a href="#">Development Tutorial</a></li>
-            <li><a href="#">How to - Blog</a></li>
-            <li><a href="#">Youtube Playlist</a></li>
-          </ul>
-        </div>
+          <!-- ALL PRODUCTS WILL RENDER HERE -->
+          <div
+            id="category-product-grid"
+            class="grid grid-cols-2 md:grid-cols-3 gap-x-4 sm:gap-x-6 gap-y-8"
+          >
+            <!--
+          Your JavaScript will render:
+          allProducts.map(product => ...)
+          inside this div.
+        -->
+          </div>
+          <!-- No products -->
+          <div id="no-products" class="hidden text-center py-20">
+            <h2 class="text-2xl font-bold">Sorry, nothing here...</h2>
+            <p class="text-black/50 mt-2">Try changing your filters.</p>
+          </div>
+          <!-- Pagination -->
+          <div
+            class="flex items-center justify-between border-t border-black/10 mt-10 pt-6"
+          >
+            <button
+              class="border border-black/10 rounded-full px-5 py-2.5 text-sm hover:bg-black hover:text-white transition"
+            >
+              ← Previous
+            </button>
+            <div class="hidden sm:flex items-center gap-2">
+              <button class="w-9 h-9 rounded-lg bg-black text-white">1</button>
+              <button class="w-9 h-9 rounded-lg hover:bg-black/5">2</button>
+              <button class="w-9 h-9 rounded-lg hover:bg-black/5">3</button>
+              <span> ... </span>
+              <button class="w-9 h-9 rounded-lg hover:bg-black/5">10</button>
+            </div>
+            <button
+              class="border border-black/10 rounded-full px-5 py-2.5 text-sm hover:bg-black hover:text-white transition"
+            >
+              Next →
+            </button>
+          </div>
+        </main>
       </div>
-      <div class="h-1 bg-gray-300 w-full"></div>
-      <div class="flex flex-col justify-center items-center gap-2">
-        <a href="#">Shop.co 2000-2023. All Rights Reserved</a>
-        <div class="flex flex-wrap gap-6">
-          <img src="/src/assets/Badge.png" alt="" />
-          <img src="/src/assets/Badge (1).png" alt="" />
-          <img src="/src/assets/Badge (2).png" alt="" />
-          <img src="/src/assets/Badge (3).png" alt="" />
-          <img src="/src/assets/Badge (4).png" alt="" />
-        </div>
-      </div>
-    </footer>
+    </section>
+    <div id="footer"></div>
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <!-- <script src="header.js"></script> -->
+    <!-- <script src="footer.js"></script> -->
+    <!-- <script src="category.js"></script> -->
+    <script src="script.js"></script>
+    <script src="category.js"></script>
   </body>
 </html>

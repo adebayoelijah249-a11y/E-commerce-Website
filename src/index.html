@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
@@ -14,7 +15,7 @@
     <title>Shop-Co</title>
   </head>
   <body class="overflow-x-hidden overflow-y-scroll">
-    <section>
+    <section class="sticky top-0 z-50">
       <!-- Top Discount Bar -->
       <div class="bg-black text-white text-xs sm:text-sm py-2 px-4 text-center">
         <p>Sign up and get 20% off your first order</p>
@@ -44,15 +45,15 @@
         <!-- Desktop Navigation -->
         <nav class="hidden lg:flex gap-5 lg:gap-8">
           <li class="list-none">
-            <a href="">Shop</a>
+            <a href="category.html">Shop</a>
           </li>
 
           <li class="list-none">
-            <a href="">On Sale</a>
+            <a href="#productTop">On Sale</a>
           </li>
 
           <li class="list-none">
-            <a href="">New Arrivals</a>
+            <a href="#productArr">New Arrivals</a>
           </li>
 
           <li class="list-none">
@@ -74,12 +75,18 @@
 
         <!-- Icons -->
         <div class="flex items-center gap-3 sm:gap-5">
-          <img
-            src="/src/assets/Vector.png"
-            alt="Search"
-            class="w-5 h-5 sm:w-6 sm:h-6"
-          />
-
+          <a href="cart.html" class="relative">
+            <img
+              src="/src/assets/Vector.png"
+              alt="Search"
+              class="w-5 h-5 sm:w-6 sm:h-6"
+            />
+            <span
+              id="cart-count"
+              class="hidden absolute -top-2 -right-3 bg-black text-white text-xs w-5 h-5 pl-1 items-center justify-center"
+              >0</span
+            >
+          </a>
           <img
             src="/src/assets/Vector (1).png"
             alt="Cart"
@@ -272,7 +279,7 @@
           <input
             type="email"
             id="email"
-            placeholder="Enter your email `   ss"
+            placeholder="Enter your email"
             class="bg-white px-6 py-3 rounded-full w-96 outline-none text-black"
           />
 
@@ -399,6 +406,8 @@
       </div>
     </div>
     <script src="product.js"></script>
+    <script src="cart.js"></script>
+    <script src="category.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
