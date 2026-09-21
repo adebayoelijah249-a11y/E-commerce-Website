@@ -1,0 +1,404 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Shop-Co</title>
+  </head>
+  <body class="overflow-x-hidden overflow-y-scroll">
+    <section>
+      <!-- Top Discount Bar -->
+      <div class="bg-black text-white text-xs sm:text-sm py-2 px-4 text-center">
+        <p>Sign up and get 20% off your first order</p>
+      </div>
+
+      <!-- Main Navbar -->
+      <div
+        class="flex items-center justify-between gap-4 bg-[#e4e4e4] p-4 sm:p-6 lg:p-8"
+      >
+        <!-- Hamburger -->
+        <button onclick="toggleMenu()" id="menuButton" class="lg:hidden">
+          <img
+            id="menuIcon"
+            src="/src/assets/Vector (2).png"
+            alt="Menu"
+            class="w-7 h-7 cursor-pointer"
+          />
+        </button>
+
+        <!-- Logo -->
+        <img
+          src="/src/assets/SHOP.CO.png"
+          alt="SHOP.CO"
+          class="w-28 sm:w-32 lg:w-36"
+        />
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex gap-5 lg:gap-8">
+          <li class="list-none">
+            <a href="">Shop</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">On Sale</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">New Arrivals</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Brands</a>
+          </li>
+        </nav>
+
+        <!-- Desktop Search -->
+        <form
+          action="search"
+          class="hidden md:flex bg-[#f5f5f5] rounded-3xl flex-1 max-w-md"
+        >
+          <input
+            class="w-full bg-transparent rounded-full px-5 py-3 outline-none"
+            type="search"
+            placeholder="Search for products..."
+          />
+        </form>
+
+        <!-- Icons -->
+        <div class="flex items-center gap-3 sm:gap-5">
+          <img
+            src="/src/assets/Vector.png"
+            alt="Search"
+            class="w-5 h-5 sm:w-6 sm:h-6"
+          />
+
+          <img
+            src="/src/assets/Vector (1).png"
+            alt="Cart"
+            class="w-5 h-5 sm:w-6 sm:h-6"
+          />
+        </div>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div id="mobileMenu" class="hidden lg:hidden bg-[#e4e4e4] px-6 pb-6">
+        <nav class="flex flex-col gap-5">
+          <a href="">Shop</a>
+          <a href="">On Sale</a>
+          <a href="">New Arrivals</a>
+          <a href="">Brands</a>
+        </nav>
+
+        <!-- Mobile Search -->
+        <form class="mt-5 bg-[#f5f5f5] rounded-3xl">
+          <input
+            type="search"
+            placeholder="Search for products..."
+            class="w-full bg-transparent rounded-full px-5 py-3 outline-none"
+          />
+        </form>
+      </div>
+    </section>
+    <section class="pl-15 pt-8 bg-[#f6f2f2] flex flex-col md:flex-row">
+      <div class="">
+        <h1 class="text-6xl font-bold sm:mb-9">
+          FIND CLOTHES <br />
+          THAT MATCHES <br />
+          YOUR STYLE
+        </h1>
+        <p class="text-[#989494] mb-6 sm:mb-8">
+          Browse through our diverse range of meticulously crafted garments,
+          <br />
+          designed to bring out your individually and cater to your sese of
+          style
+        </p>
+        <button
+          class="rounded-2xl bg-mist-950 text-emerald-50 hover:bg-[#e4e4e4] px-9 py-2 mb-10 sm:mb-12"
+        >
+          Shop Now
+        </button>
+        <div class="flex flex-col md:flex-row gap-15 text-3xl items-center">
+          <div class="flex flex-row gap-10">
+            <div>
+              <p class="text-5xl">200+</p>
+              <p class="text-sm">International</p>
+            </div>
+            <div>
+              <p class="text-5xl">2,000+</p>
+              <p class="text-sm">High-Quality Products</p>
+            </div>
+          </div>
+          <div>
+            <p class="text-5xl">30,000+</p>
+            <p class="text-sm">Happ Customers</p>
+          </div>
+        </div>
+      </div>
+      <div><img src="/src/assets/Rectangle 2-Photoroom.png" alt="" /></div>
+    </section>
+    <section>
+      <div class="bg-black">
+        <marquee behavior="" direction="">
+          <div class="flex gap-20 pt-10 pl-30">
+            <img src="/src/assets/Group.png" alt="" />
+            <img src="/src/assets/zara-logo-1 1.png" alt="" />
+            <img src="/src/assets/gucci-logo-1 1.png" alt="" />
+            <img src="/src/assets/prada-logo-1 1.png" alt="" />
+            <img src="/src/assets/Group (1).png" alt="" />
+          </div>
+        </marquee>
+      </div>
+      <div>
+        <h2 class="font-bold text-center text-5xl pt-4">NEW ARRIVALS</h2>
+        <div
+          id="productArr"
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6"
+        ></div>
+        <div class="text-center mt-10 md:mt14">
+          <button
+            class="w-full sm:w-auto px-14 border-black/10 rounded-full font-medium hover:bg-black hover:text-white transition-all duration-200"
+          >
+            View All
+          </button>
+        </div>
+      </div>
+      <div>
+        <h2 class="font-bold text-center text-5xl pt-4">TOP SELLING</h2>
+        <div
+          id="productTop"
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6"
+        ></div>
+        <div class="text-center mt-10 md:mt14 mb-10">
+          <button
+            class="w-full sm:w-auto px-14 border-black/10 rounded-full font-medium hover:bg-black hover:text-white transition-all duration-200"
+          >
+            View All
+          </button>
+        </div>
+      </div>
+      <div class="bg-[#e9e3e3b1] rounded-2xl m-6">
+        <h3 class="font-bold text-5xl text-center m-9">
+          BROWSE BY DRESS STYLE
+        </h3>
+        <div class="grid grid-cols-3">
+          <div class="">
+            <p class="font-bold text-3xl">Casual</p>
+            <img src="/src/assets/image 11-Photoroom.png" alt="" />
+          </div>
+          <div class="col-span-2">
+            <p class="font-bold text-3xl">Formal</p>
+            <img src="/src/assets/image 13-Photoroom.png" alt="" />
+          </div>
+          <div class="col-span-2">
+            <p class="font-bold text-3xl">Party</p>
+            <img src="/src/assets/image 12-Photoroom.png" alt="" />
+          </div>
+          <div>
+            <p class="font-bold text-3xl">Gym</p>
+            <img src="/src/assets/image 14-Photoroom.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <section>
+        <h4 class="text-5xl p-l font-bold pl-10">OUR HAPPY CUSTOMERS</h4>
+        <div class="flex gap-10 p-10">
+          <div>
+            <div style="color: gold">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="">Sarah M.</p>
+            "I'm blown away by the uality and style of the <br />
+            clothes i received fromShop.co. From casual <br />
+            wear to elegant dresses every piece i've bought <br />
+            has exceeded my experience. "
+          </div>
+          <div>
+            <div style="color: gold">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="">Alex K.</p>
+            "Finding clothes that align with my personal <br />style used to be
+            a challenge until i discovered <br />
+            Shop.co.The range of options they offer is truly <br />
+            remarkable catetring and <br />
+            variety of tastes and occasions "
+          </div>
+          <div>
+            <div style="color: gold">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="">James L.</p>
+            "As someone who's always on the lookout for <br />
+            unique fashion pieces, i'm thrilled to have <br />stumbled upon
+            Shop.co The selection of <br />
+            clothes is not only diverse but also on-point <br />
+            with the level friends."
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="m-10">
+      <div
+        class="bg-black rounded-3xl gap-70 p-8 mx-auto flex flex-col md:flex-row items-center"
+      >
+        <p class="text-5xl text-white font-bold pl-4 items-center">
+          STAY UPTO DATE ABOUT <br />
+          OUR LATEST OFFERS
+        </p>
+        <form
+          onsubmit="subscribe(event)"
+          class="flex flex-col gap-4 w-30 p- max-w-sm"
+        >
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email `   ss"
+            class="bg-white px-6 py-3 rounded-full w-96 outline-none text-black"
+          />
+
+          <button
+            type="submit"
+            class="bg-white text-black px-6 py-3 rounded-full w-96 font-medium hover:bg-gray-200 transition"
+          >
+            Subscribe to Newsletter
+          </button>
+        </form>
+      </div>
+    </section>
+    <section class="bg-[#e4e4e4] flex gap-15 p-6">
+      <div>
+        <img src="/src/assets/SHOP.CO.png" alt="" />
+        <p>
+          We have clothes that suits your style and <br />
+          which you're proud to wear.From womem to men.
+        </p>
+        <div class="flex gap-4 p-4">
+          <a href="https://x.com/home">
+            <img src="/src/assets/1.png" alt=""
+          /></a>
+          <a href="https://web.facebook.com/">
+            <img src="/src/assets/2.png" alt="" />
+          </a>
+          <a href="https://www.instagram.com/">
+            <img src="/src/assets/3.png" alt="" />
+          </a>
+          <a href="https://github.com/">
+            <img src="/src/assets/4.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="font-bold">COMPANY</p>
+        <nav class="gap-9">
+          <li class="list-none">
+            <a href="">About</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Features</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Works</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Career</a>
+          </li>
+        </nav>
+      </div>
+      <div>
+        <p class="font-bold">HELP</p>
+        <nav class="gap-9">
+          <li class="list-none">
+            <a href="">Customer Support</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Dlivery Details</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Terms & Conditions</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Privacy Policyr</a>
+          </li>
+        </nav>
+      </div>
+      <div>
+        <p class="font-bold">FAQ</p>
+        <nav class="gap-9">
+          <li class="list-none">
+            <a href="">Account</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Manage Deliveries</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Orders</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Payments</a>
+          </li>
+        </nav>
+      </div>
+      <div>
+        <p class="font-bold">RESOURCES</p>
+        <nav class="gap-9">
+          <li class="list-none">
+            <a href="">Free eBooks</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Development Tutorial</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">How to Blog</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Youtube Playlist</a>
+          </li>
+        </nav>
+      </div>
+    </section>
+    <div class="flex gap-6 justify-between">
+      <p>Shop.co 2000-2023. All Rights Reserved</p>
+      <div class="flex gap-6">
+        <img src="/src/assets/Badge.png" alt="" />
+        <img src="/src/assets/Badge (1).png" alt="" />
+        <img src="/src/assets/Badge (2).png" alt="" />
+        <img src="/src/assets/Badge (3).png" alt="" />
+        <img src="/src/assets/Badge (4).png" alt="" />
+      </div>
+    </div>
+    <script src="product.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

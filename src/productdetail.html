@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Product Details</title>
+  </head>
+  <body class="overflow-x-hidden overflow-y-scroll">
+    <section>
+      <!-- Top Discount Bar -->
+      <div
+        class="bg-black text-white text-xs sm:text-sm py-2 text-center justify-center flex gap-3"
+      >
+        <p>sign up and get 20% off ur first order</p>
+        <li class="list-none">
+          <a href="">Sign Up Now</a>
+        </li>
+      </div>
+
+      <!-- Main Navbar -->
+      <div
+        class="flex items-center justify-between gap-4 bg-[#e4e4e4] p-4 sm:p-6 lg:p-8"
+      >
+        <!-- Hamburger -->
+        <button onclick="toggleMenu()" id="menuButton" class="lg:hidden">
+          <img
+            id="menuIcon"
+            src="/src/assets/Vector (2).png"
+            alt="Menu"
+            class="w-7 h-7 cursor-pointer"
+          />
+        </button>
+
+        <!-- Logo -->
+        <img
+          src="/src/assets/SHOP.CO.png"
+          alt="SHOP.CO"
+          class="w-28 sm:w-32 lg:w-36"
+        />
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex gap-5 lg:gap-8">
+          <li class="list-none">
+            <a href="">Shop</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">On Sale</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">New Arrivals</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Brands</a>
+          </li>
+        </nav>
+
+        <!-- Desktop Search -->
+        <form
+          action="search"
+          class="hidden md:flex bg-[#f5f5f5] rounded-3xl flex-1 max-w-md"
+        >
+          <input
+            class="w-full bg-transparent rounded-full px-5 py-3 outline-none"
+            type="search"
+            placeholder="Search for products..."
+          />
+        </form>
+
+        <!-- Icons -->
+        <div class="flex items-center gap-3 sm:gap-5">
+          <img
+            src="/src/assets/Vector.png"
+            alt="Search"
+            class="w-5 h-5 sm:w-6 sm:h-6"
+          />
+
+          <img
+            src="/src/assets/Vector (1).png"
+            alt="Cart"
+            class="w-5 h-5 sm:w-6 sm:h-6"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Small Navbar -->
+    <section class="md:p-10 p-3">
+      <nav class="flex gap-3">
+        <li class="list-none">
+          <a href="">Home</a>
+        </li>
+        <li class="list-none">
+          <a href="">Shop</a>
+        </li>
+        <li class="list-none">
+          <a href="">Men</a>
+        </li>
+        <li class="list-none">
+          <a href="">T-shirts</a>
+        </li>
+      </nav>
+    </section>
+    <section class="gap-5 flex flex-col md:flex md:flex-row md:p-10">
+      <div class="flex flex-wrap justify-center gap-4">
+        <img src="/src/assets/image 1.png" alt="" />
+        <div class="flex flex-wrap gap-4">
+          <img src="/src/assets/image 2.png" alt="" />
+          <img src="/src/assets/image 5.png" alt="" />
+          <img src="/src/assets/image 6.png" alt="" />
+        </div>
+      </div>
+      <div class="w-3xl md:p-10 p-2">
+        <h1 class="text-4xl font-bold md:text-6xl">
+          ONE LIFE GRAPHIC <br />
+          T-SHIRT
+        </h1>
+        <div class="flex gap-3 pt-4">
+          <div style="color: gold">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p>4.5/5</p>
+        </div>
+        <div class="flex gap-3 pt-4 p-3">
+          <p class="text-2xl font-bold">$260</p>
+          <del class="text-[#aaaaaa ] text-2xl">$300</del>
+          <p class="bg-red-300 text-red-100 rounded-2xl w-20 text-center">
+            -40%
+          </p>
+        </div>
+        <p class="md:p-8 p-1 w-96 md:text-2xl md:w-2xl">
+          The graphic T-shirt which is perfect for any occasion Crafted from a
+          soft and breatheable fabric, it offers a superior comfort and style
+        </p>
+
+        <p class="md:p-6 p-1 text-2xl">Select Colors</p>
+        <div class="w-">
+          <button class="bg-[#]rounded-full h-10 w-10">✔</button>
+          <button class="bg-[#]rounded-full h-10 w-10">✔</button>
+          <button class="bg-[#31344F]rounded-full h-10 w-10">✔</button>
+        </div>
+
+        <div>
+          <div>
+            <p class="text-2xl p-8">Choose Size</p>
+            <div class="flex md:gap-5 gap-2">
+              <button
+                class="size-btn bg-[#faf5f5] text-black rounded-3xl hover:bg-gray-400 md:w-30 p-3"
+              >
+                Small
+              </button>
+              <button
+                class="size-btn bg-[#faf5f5] text-black rounded-3xl hover:bg-gray-400 md:w-30 p-3"
+              >
+                Medium</button
+              ><button
+                class="size-btn bg-[#faf5f5] text-black rounded-3xl hover:bg-gray-400 md:w-30 p-3"
+              >
+                Large</button
+              ><button
+                class="size-btn bg-[#faf5f5] text-black rounded-3xl hover:bg-gray-400 md:w-30 p-3"
+              >
+                X-large
+              </button>
+            </div>
+            <div class="flex gap-4 p-4">
+              <div
+                class="flex justify-between items-center rounded-2xl p-3 bg[#faf5f5] text-black hover:bg-gray-400 md:w-30"
+              >
+                <button>-</button>
+                <p>1</p>
+                <button>+</button>
+              </div>
+              <button
+                class="size-btn bg-black text-white rounded-3xl hover:bg-gray-400 md:p-10"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-col items-center">
+      <div class="flex justify-center gap-10">
+        <div class="flex gap-5">
+          <li class="list-none">
+            <a href="">Product Details</a>
+          </li>
+          <li class="list-none">
+            <a href="">Rating & Reviews</a>
+          </li>
+          <li class="list-none">
+            <a href="">FAQs</a>
+          </li>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <p class="text-2xl font-bold">All Reviews</p>
+        <p class="p-2">(457)</p>
+      </div>
+
+      <div class="p-3 flex flex-wrap justify-center gap-4">
+        <div class="p-3 rounded-2xl bg-[#dcdcdc] max-w-[20rem] md:w-2xl">
+          <div style="color: gold">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p class="font-bold">Samantha D.</p>
+          <p class="text-gray-500 p-">
+            "I absolutely love this 1-shirt, The design is unique and the fabric
+            feels so <br />
+            comfortable. As a fellow designer I appreciate the attention to the
+            details it's <br />
+            become my favorite go-to shirt. "
+          </p>
+          <p class="pt-5">Posted on August 14.2023</p>
+        </div>
+        <div class="p-3 rounded-2xl bg-[#dcdcdc] max-w-[20rem] md:w-2xl">
+          <div style="color: gold">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p class="font-bold">Ethan R.</p>
+          <p class="text-gray-500 p-">
+            " This T-shirt must-have anyone who appereciates good design. The
+            <br />
+            minimalistic yet stylish pattern caught my eye, and the fit is
+            perfect i can <br />
+            see the designer's touch in every piece of this shirt."
+          </p>
+          <p class="pt-2">Posted on August 16.2023</p>
+        </div>
+        <div class="p-3 rounded-2xl bg-[#dcdcdc] max-w-[20rem] md:w-2xl">
+          <div style="color: gold">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="font-bold">Liam K.</p>
+          <p class="text-gray-500 p-">
+            "This T-shirtis fusion of comfort and creativity. The fabric is soft
+            and the design speaks volumes about the designer's skill, it's like
+            wearing a piece br of art that reflects my passion for both design
+            and fashion."
+          </p>
+          <p class="pt-2">Posted on August 18.2023</p>
+        </div>
+        <div class="p-3 rounded-2xl bg-[#dcdcdc] max-w-[20rem] md:w-2xl">
+          <div style="color: gold">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="font-bold">Alex M.</p>
+          <p class="text-gray-500 pt-2">
+            "The T-shirt i excedded my expectation.The colors are vibrant and
+            the print quality is top-notch. Being a UI/UX designer myself, i'm
+            quite picky about aesthetics and the T-shirt definitely gets a
+            thumbs up from me."
+          </p>
+          <p class="pt-5">Posted on August 15.2023</p>
+        </div>
+        <div class="p-3 rounded-2xl bg-[#dcdcdc] max-w-[20rem] md:w-2xl">
+          <div style="color: gold">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="font-bold">Olivia P.</p>
+          <p class="text-gray-500 p-">
+            "As a UI/UX designer i value simplicity and functionality. This
+            T-shirt not only represents those principles but also feels great to
+            weart, it's evident that the designer poured their creativity into
+            making the T-shirt stand out."
+          </p>
+          <p class="pt-5">Posted on August 17.2023</p>
+        </div>
+        <div class="p-3 rounded-2xl bg-[#dcdcdc] max-w-[20rem] md:w-2xl">
+          <div style="color: gold">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+          </div>
+          <p class="font-bold">Ava H.</p>
+          <p class="text-gray-500 p-">
+            "I'm not just wearing a T-shirt: I'm wearting a piece of design
+            philoshophy. The intricate details and thoghtful layout of the
+            design make this shirt a conversation starter."
+          </p>
+          <p class="pt-5">Posted on August 19.2023</p>
+        </div>
+      </div>
+      <button
+        class="size-btn bg-[#faf5f5] text-black rounded-3xl hover:bg-gray-400 md:w-30 p-3 flex justify-center"
+      >
+        Load More Reviews
+      </button>
+    </section>
+    <section>
+      <div>
+        <h2 class="flex font-bold text-3xl justify-center p-4">
+          YOU MIGHT ALSO LIKE
+        </h2>
+        <!-- Polo -->
+        <div class="md:flex md:gap-4 md:p-4 pl-4 justify-items-center">
+          <div>
+            <img src="/src/assets/Frame 32.png" alt="" />
+            <p class="font-bold">Polo with Contrast Trims</p>
+            <div class="flex gap-3">
+              <div style="color: gold">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>4.0/5</p>
+            </div>
+          </div>
+          <!-- 2nd Polo -->
+          <div>
+            <img src="/src/assets/Frame 33.png" alt="" />
+            <p class="font-bold">Polo with Contrast Trims</p>
+            <div class="flex gap-3">
+              <div style="color: gold">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>4.0/5</p>
+            </div>
+          </div>
+          <!-- 3rd Polo -->
+          <div>
+            <img src="/src/assets/Frame 34.png" alt="" />
+            <p class="font-bold">Polo with Contrast Trims</p>
+            <div class="flex gap-3">
+              <div style="color: gold">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>4.0/5</p>
+            </div>
+          </div>
+
+          <!-- 4th Polo -->
+          <div>
+            <img src="/src/assets/Frame 38.png" alt="" />
+            <p class="font-bold">Polo with Contrast Trims</p>
+            <div class="flex gap-3">
+              <div style="color: gold">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p>4.0/5</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="m-10">
+      <section class="m-10">
+        <div
+          class="bg-black rounded-3xl gap-70 p-8 mx-auto flex flex-col md:flex-row items-center"
+        >
+          <p class="text-5xl text-white font-bold pl-4 items-center">
+            STAY UPTO DATE ABOUT <br />
+            OUR LATEST OFFERS
+          </p>
+          <form
+            onsubmit="subscribe(event)"
+            class="flex flex-col gap-4 w-30 p- max-w-sm"
+          >
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email address"
+              class="bg-white px-6 py-3 rounded-full w-96 outline-none text-black"
+            />
+
+            <button
+              type="submit"
+              class="bg-white text-black px-6 py-3 rounded-full w-96 font-medium hover:bg-gray-200 transition"
+            >
+              Subscribe to Newsletter
+            </button>
+          </form>
+        </div>
+      </section>
+    </section>
+    <section class="bg-[#e4e4e4] flex gap-15 p-6">
+      <div>
+        <img src="/src/assets/SHOP.CO.png" alt="" />
+        <p>
+          We have clothes that suits your style and <br />
+          which you're proud to wear.From <br />
+          womem to men.
+        </p>
+        <div class="flex gap-4 p-4">
+          <a href="https://x.com/home">
+            <img src="/src/assets/1.png" alt=""
+          /></a>
+          <a href="https://web.facebook.com/">
+            <img src="/src/assets/2.png" alt="" />
+          </a>
+          <a href="https://www.instagram.com/">
+            <img src="/src/assets/3.png" alt="" />
+          </a>
+          <a href="https://github.com/">
+            <img src="/src/assets/4.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="font-bold">COMPANY</p>
+        <nav class="gap-9">
+          <li class="list-none">
+            <a href="">About</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Features</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Works</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Career</a>
+          </li>
+        </nav>
+      </div>
+      <div>
+        <p class="font-bold">HELP</p>
+        <nav class="gap-9">
+          <li class="list-none">
+            <a href="">Customer Support</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Dlivery Details</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Terms & Conditions</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Privacy Policyr</a>
+          </li>
+        </nav>
+      </div>
+      <div>
+        <p class="font-bold">FAQ</p>
+        <nav class="gap-9">
+          <li class="list-none">
+            <a href="">Account</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Manage Deliveries</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Orders</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Payments</a>
+          </li>
+        </nav>
+      </div>
+      <div>
+        <p class="font-bold">RESOURCES</p>
+        <nav class="gap-9">
+          <li class="list-none">
+            <a href="">Free eBooks</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Development Tutorial</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">How to Blog</a>
+          </li>
+
+          <li class="list-none">
+            <a href="">Youtube Playlist</a>
+          </li>
+        </nav>
+      </div>
+    </section>
+    <div class="flex gap-6 justify-between">
+      <p>Shop.co 2000-2023. All Rights Reserved</p>
+      <div class="flex gap-6">
+        <img src="/src/assets/Badge.png" alt="" />
+        <img src="/src/assets/Badge (1).png" alt="" />
+        <img src="/src/assets/Badge (2).png" alt="" />
+        <img src="/src/assets/Badge (3).png" alt="" />
+        <img src="/src/assets/Badge (4).png" alt="" />
+      </div>
+    </div>
+    <script src="product.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
